@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "0585a5217b52db0b498d6a253852cc7f"
+build_time: [1548615150, 213858000]
+inputs:
+  "/Users/laserino/Desktop/Projects/swift-\u043C\u043E\u0434\u0443\u043B\u044C3/8/Plane Detection/Plane Detection/ViewController.swift": [1548615150, 0]
+  "/Users/laserino/Desktop/Projects/swift-\u043C\u043E\u0434\u0443\u043B\u044C3/8/Plane Detection/Plane Detection/AppDelegate.swift": [1548501704, 0]
+  "/Users/laserino/Desktop/Projects/swift-\u043C\u043E\u0434\u0443\u043B\u044C3/8/Plane Detection/Plane Detection/node.swift": [1548613664, 0]
