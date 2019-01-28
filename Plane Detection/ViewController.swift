@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         let configuration = ARWorldTrackingConfiguration()
         
         //123 -label
-        configuration.planeDetection = [.vertical]//[.horizontal]
+        configuration.planeDetection = [.horizontal, .vertical]
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -77,6 +77,24 @@ class ViewController: UIViewController {
         let extent = anchor.extent
         
         let geometry = SCNPlane(width: CGFloat(extent.x), height: CGFloat(extent.z))
+        
+        geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        node.geometry = geometry
+        
+        node.eulerAngles.x = -.pi / 2
+        //node.eulerAngles.x = 3 * .pi/2
+        node.opacity = 0.25
+        
+        
+        return node
+    }
+    
+    func createWall(anchor: ARPlaneAnchor) -> SCNNode {
+        let node = SCNNode()
+        
+        let extent = anchor.extent
+        
+        let geometry = SCNPlane(width: CGFloat(extent.y), height: CGFloat(extent.z))
         
         geometry.firstMaterial?.diffuse.contents = UIColor.red
         node.geometry = geometry
@@ -117,6 +135,10 @@ extension ViewController: ARSCNViewDelegate {
         //print(#function, "Plane: \(anchor.extent.x)x\(anchor.extent.z)")
         let floor  = createFloor(anchor: anchor)
         node.addChildNode(floor)
+        
+        let wall  = createWall(anchor: anchor)
+        node.addChildNode(wall)
+        
         
 //        let ship = createShip(anchor: anchor)
 //        node.addChildNode(ship)  nodeCampus

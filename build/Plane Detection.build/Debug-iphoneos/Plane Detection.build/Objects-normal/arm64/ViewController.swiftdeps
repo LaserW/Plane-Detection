@@ -16,6 +16,7 @@ provides-dynamic-lookup:
 - "viewWillDisappear"
 depends-top-level:
 - !private "*"
+- !private "-"
 - !private "/"
 - "ARAnchor"
 - "ARPlaneAnchor"
@@ -68,6 +69,7 @@ depends-member:
 - !private ["So17ARSCNViewDelegateP", "UIColor"]
 - ["So17ARSCNViewDelegateP", ""]
 - !private ["So17ARSCNViewDelegateP", "createFloor"]
+- !private ["So17ARSCNViewDelegateP", "createWall"]
 - !private ["So17ARSCNViewDelegateP", "nodeCampus"]
 - ["So17ARSCNViewDelegateP", "renderer"]
 - !private ["So17ARSCNViewDelegateP", "sceneView"]
@@ -88,6 +90,7 @@ depends-member:
 - !private ["So17ARSessionObserverP", "UIColor"]
 - ["So17ARSessionObserverP", ""]
 - !private ["So17ARSessionObserverP", "createFloor"]
+- !private ["So17ARSessionObserverP", "createWall"]
 - !private ["So17ARSessionObserverP", "nodeCampus"]
 - ["So17ARSessionObserverP", "renderer"]
 - !private ["So17ARSessionObserverP", "sceneView"]
@@ -121,11 +124,13 @@ depends-member:
 - !private ["s7CVarArgP", "UIColor"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addChildNode"]
+- !private ["s7CVarArgP", "blue"]
 - !private ["s7CVarArgP", "center"]
 - !private ["s7CVarArgP", "childNodes"]
 - !private ["s7CVarArgP", "clone"]
 - !private ["s7CVarArgP", "contents"]
 - !private ["s7CVarArgP", "createFloor"]
+- !private ["s7CVarArgP", "createWall"]
 - !private ["s7CVarArgP", "debugOptions"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "diffuse"]
@@ -162,6 +167,7 @@ depends-member:
 - !private ["Sl", "first"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
+- !private ["Sl", "pi"]
 - !private ["Sl", "x"]
 - !private ["Sl", "y"]
 - !private ["Sl", "z"]
@@ -179,11 +185,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addChildNode"]
+- !private ["s28CustomDebugStringConvertibleP", "blue"]
 - !private ["s28CustomDebugStringConvertibleP", "center"]
 - !private ["s28CustomDebugStringConvertibleP", "childNodes"]
 - !private ["s28CustomDebugStringConvertibleP", "clone"]
 - !private ["s28CustomDebugStringConvertibleP", "contents"]
 - !private ["s28CustomDebugStringConvertibleP", "createFloor"]
+- !private ["s28CustomDebugStringConvertibleP", "createWall"]
 - !private ["s28CustomDebugStringConvertibleP", "debugOptions"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "diffuse"]
@@ -243,11 +251,13 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIColor"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addChildNode"]
+- !private ["s23CustomStringConvertibleP", "blue"]
 - !private ["s23CustomStringConvertibleP", "center"]
 - !private ["s23CustomStringConvertibleP", "childNodes"]
 - !private ["s23CustomStringConvertibleP", "clone"]
 - !private ["s23CustomStringConvertibleP", "contents"]
 - !private ["s23CustomStringConvertibleP", "createFloor"]
+- !private ["s23CustomStringConvertibleP", "createWall"]
 - !private ["s23CustomStringConvertibleP", "debugOptions"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "diffuse"]
@@ -290,6 +300,7 @@ depends-member:
 - !private ["Se", "scene"]
 - !private ["Se", "session"]
 - !private ["Se", "showsStatistics"]
+- !private ["Sd", "pi"]
 - !private ["SE", "debugOptions"]
 - !private ["SE", "delegate"]
 - !private ["SE", "first"]
@@ -310,11 +321,13 @@ depends-member:
 - !private ["SQ", "UIColor"]
 - ["SQ", ""]
 - !private ["SQ", "addChildNode"]
+- !private ["SQ", "blue"]
 - !private ["SQ", "center"]
 - !private ["SQ", "childNodes"]
 - !private ["SQ", "clone"]
 - !private ["SQ", "contents"]
 - !private ["SQ", "createFloor"]
+- !private ["SQ", "createWall"]
 - !private ["SQ", "debugOptions"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "diffuse"]
@@ -324,6 +337,7 @@ depends-member:
 - !private ["SQ", "firstMaterial"]
 - !private ["SQ", "geometry"]
 - !private ["SQ", "height"]
+- !private ["SQ", "horizontal"]
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "loadProgrammaticCampus"]
@@ -355,6 +369,8 @@ depends-member:
 - !private ["SQ", "y"]
 - !private ["SQ", "z"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "horizontal"]
+- !private ["s25ExpressibleByArrayLiteralP", "pi"]
 - !private ["s25ExpressibleByArrayLiteralP", "showFeaturePoints"]
 - !private ["s25ExpressibleByArrayLiteralP", "showWorldOrigin"]
 - !private ["s25ExpressibleByArrayLiteralP", "vertical"]
@@ -390,11 +406,13 @@ depends-member:
 - !private ["SH", "UIColor"]
 - ["SH", ""]
 - !private ["SH", "addChildNode"]
+- !private ["SH", "blue"]
 - !private ["SH", "center"]
 - !private ["SH", "childNodes"]
 - !private ["SH", "clone"]
 - !private ["SH", "contents"]
 - !private ["SH", "createFloor"]
+- !private ["SH", "createWall"]
 - !private ["SH", "debugOptions"]
 - !private ["SH", "delegate"]
 - !private ["SH", "diffuse"]
@@ -445,11 +463,13 @@ depends-member:
 - !private ["So8NSCodingP", "UIColor"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addChildNode"]
+- !private ["So8NSCodingP", "blue"]
 - !private ["So8NSCodingP", "center"]
 - !private ["So8NSCodingP", "childNodes"]
 - !private ["So8NSCodingP", "clone"]
 - !private ["So8NSCodingP", "contents"]
 - !private ["So8NSCodingP", "createFloor"]
+- !private ["So8NSCodingP", "createWall"]
 - !private ["So8NSCodingP", "debugOptions"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "diffuse"]
@@ -479,6 +499,7 @@ depends-member:
 - !private ["So8NSCodingP", "viewWillDisappear"]
 - !private ["So8NSCodingP", "width"]
 - !private ["So9NSCopyingP", "addChildNode"]
+- !private ["So9NSCopyingP", "blue"]
 - !private ["So9NSCopyingP", "center"]
 - !private ["So9NSCopyingP", "childNodes"]
 - !private ["So9NSCopyingP", "clone"]
@@ -505,6 +526,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "createFloor"]
+- !private ["So26NSExtensionRequestHandlingP", "createWall"]
 - ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "loadProgrammaticCampus"]
@@ -518,7 +540,9 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So26NSExtensionRequestHandlingP", "viewWillAppear"]
 - !private ["So26NSExtensionRequestHandlingP", "viewWillDisappear"]
+- !private ["So21NSItemProviderReadingP", "blue"]
 - !private ["So21NSItemProviderReadingP", "red"]
+- !private ["So21NSItemProviderWritingP", "blue"]
 - !private ["So21NSItemProviderWritingP", "red"]
 - ["So8NSObjectC", "ARAnchor"]
 - ["So8NSObjectC", "ARPlaneAnchor"]
@@ -537,12 +561,14 @@ depends-member:
 - !private ["So8NSObjectC", "SCNVector3"]
 - !private ["So8NSObjectC", "UIColor"]
 - !private ["So8NSObjectC", "addChildNode"]
+- !private ["So8NSObjectC", "blue"]
 - !private ["So8NSObjectC", "center"]
 - !private ["So8NSObjectC", "childNodes"]
 - !private ["So8NSObjectC", "clone"]
 - !private ["So8NSObjectC", "contents"]
 - ["So8NSObjectC", "createFloor"]
 - ["So8NSObjectC", "createShip"]
+- ["So8NSObjectC", "createWall"]
 - !private ["So8NSObjectC", "debugOptions"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "diffuse"]
@@ -585,11 +611,13 @@ depends-member:
 - !private ["So8NSObjectP", "UIColor"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "addChildNode"]
+- !private ["So8NSObjectP", "blue"]
 - !private ["So8NSObjectP", "center"]
 - !private ["So8NSObjectP", "childNodes"]
 - !private ["So8NSObjectP", "clone"]
 - !private ["So8NSObjectP", "contents"]
 - !private ["So8NSObjectP", "createFloor"]
+- !private ["So8NSObjectP", "createWall"]
 - !private ["So8NSObjectP", "debugOptions"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "diffuse"]
@@ -622,6 +650,7 @@ depends-member:
 - !private ["So8NSObjectP", "viewWillDisappear"]
 - !private ["So8NSObjectP", "width"]
 - !private ["So14NSSecureCodingP", "addChildNode"]
+- !private ["So14NSSecureCodingP", "blue"]
 - !private ["So14NSSecureCodingP", "center"]
 - !private ["So14NSSecureCodingP", "childNodes"]
 - !private ["So14NSSecureCodingP", "clone"]
@@ -643,6 +672,7 @@ depends-member:
 - !private ["15Plane_Detection4NodeC", "loadProgrammaticCampus"]
 - !private ["Sj", "init"]
 - !private ["Sj", "pi"]
+- !private ["s9OptionSetP", "horizontal"]
 - !private ["s9OptionSetP", "showFeaturePoints"]
 - !private ["s9OptionSetP", "showWorldOrigin"]
 - !private ["s9OptionSetP", "vertical"]
@@ -651,11 +681,13 @@ depends-member:
 - !private ["Sq", "scene"]
 - !private ["Sq", "session"]
 - !private ["Sq", "showsStatistics"]
+- !private ["So16ARPlaneDetectionV", "horizontal"]
 - !private ["So16ARPlaneDetectionV", "vertical"]
 - !private ["Sk", "first"]
 - !private ["Sm", "first"]
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
+- !private ["SY", "horizontal"]
 - !private ["SY", "showFeaturePoints"]
 - !private ["SY", "showWorldOrigin"]
 - !private ["SY", "vertical"]
@@ -729,6 +761,7 @@ depends-member:
 - !private ["So24SCNSceneRendererDelegateP", "UIColor"]
 - ["So24SCNSceneRendererDelegateP", ""]
 - !private ["So24SCNSceneRendererDelegateP", "createFloor"]
+- !private ["So24SCNSceneRendererDelegateP", "createWall"]
 - !private ["So24SCNSceneRendererDelegateP", "nodeCampus"]
 - ["So24SCNSceneRendererDelegateP", "renderer"]
 - !private ["So24SCNSceneRendererDelegateP", "sceneView"]
@@ -758,9 +791,11 @@ depends-member:
 - !private ["ST", "first"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
+- !private ["ST", "pi"]
 - !private ["ST", "x"]
 - !private ["ST", "y"]
 - !private ["ST", "z"]
+- !private ["s10SetAlgebraP", "horizontal"]
 - !private ["s10SetAlgebraP", "showFeaturePoints"]
 - !private ["s10SetAlgebraP", "showWorldOrigin"]
 - !private ["s10SetAlgebraP", "vertical"]
@@ -797,6 +832,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "createFloor"]
+- !private ["So21UIAppearanceContainerP", "createWall"]
 - !private ["So21UIAppearanceContainerP", "debugOptions"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - ["So21UIAppearanceContainerP", "init"]
@@ -814,6 +850,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So21UIAppearanceContainerP", "viewWillAppear"]
 - !private ["So21UIAppearanceContainerP", "viewWillDisappear"]
+- !private ["So7UIColorC", "blue"]
 - !private ["So7UIColorC", "red"]
 - !private ["So18UIContentContainerP", "ARSCNDebugOptions"]
 - !private ["So18UIContentContainerP", "ARWorldTrackingConfiguration"]
@@ -826,6 +863,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIColor"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "createFloor"]
+- !private ["So18UIContentContainerP", "createWall"]
 - ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "loadProgrammaticCampus"]
@@ -863,6 +901,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "childNodes"]
 - !private ["So18UIFocusEnvironmentP", "clone"]
 - !private ["So18UIFocusEnvironmentP", "createFloor"]
+- !private ["So18UIFocusEnvironmentP", "createWall"]
 - !private ["So18UIFocusEnvironmentP", "debugOptions"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "eulerAngles"]
@@ -913,6 +952,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "createFloor"]
+- !private ["So30UIPasteConfigurationSupportingP", "createWall"]
 - !private ["So30UIPasteConfigurationSupportingP", "debugOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
@@ -948,6 +988,7 @@ depends-member:
 - !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "createFloor"]
 - ["So11UIResponderC", "createShip"]
+- ["So11UIResponderC", "createWall"]
 - !private ["So11UIResponderC", "debugOptions"]
 - !private ["So11UIResponderC", "delegate"]
 - ["So11UIResponderC", "init"]
@@ -976,6 +1017,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "createFloor"]
+- !private ["So30UIResponderStandardEditActionsP", "createWall"]
 - !private ["So30UIResponderStandardEditActionsP", "debugOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - ["So30UIResponderStandardEditActionsP", "init"]
@@ -1004,6 +1046,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIColor"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "createFloor"]
+- !private ["So16UIStateRestoringP", "createWall"]
 - ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "loadProgrammaticCampus"]
@@ -1028,6 +1071,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "createFloor"]
+- !private ["So18UITraitEnvironmentP", "createWall"]
 - !private ["So18UITraitEnvironmentP", "debugOptions"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - ["So18UITraitEnvironmentP", "init"]
@@ -1056,6 +1100,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "createFloor"]
+- !private ["So23UIUserActivityRestoringP", "createWall"]
 - !private ["So23UIUserActivityRestoringP", "debugOptions"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
 - ["So23UIUserActivityRestoringP", "init"]
@@ -1097,6 +1142,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "createFloor"]
 - ["So16UIViewControllerC", "createShip"]
+- ["So16UIViewControllerC", "createWall"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "loadProgrammaticCampus"]
@@ -1128,6 +1174,7 @@ depends-member:
 - !private ["15Plane_Detection14ViewControllerC", "UIColor"]
 - ["15Plane_Detection14ViewControllerC", "createFloor"]
 - ["15Plane_Detection14ViewControllerC", "createShip"]
+- ["15Plane_Detection14ViewControllerC", "createWall"]
 - ["15Plane_Detection14ViewControllerC", "deinit"]
 - ["15Plane_Detection14ViewControllerC", "init"]
 - ["15Plane_Detection14ViewControllerC", "nodeCampus"]
@@ -1160,6 +1207,7 @@ depends-member:
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "blue"]
 - !private ["s26_ExpressibleByColorLiteralP", "red"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
@@ -1176,11 +1224,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addChildNode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "center"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "childNodes"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clone"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contents"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createFloor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createWall"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "debugOptions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "diffuse"]
@@ -1226,9 +1276,41 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "z"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
+- !private ["4simd7double2V", "pi"]
+- !private ["4simd7double3V", "pi"]
+- !private ["4simd7double4V", "pi"]
+- !private ["4simd6float2V", "pi"]
+- !private ["4simd6float3V", "pi"]
 - !private ["4simd6float3V", "x"]
 - !private ["4simd6float3V", "y"]
 - !private ["4simd6float3V", "z"]
+- !private ["4simd6float4V", "pi"]
+- !private ["4simd4int2V", "pi"]
+- !private ["4simd4int3V", "pi"]
+- !private ["4simd4int4V", "pi"]
+- !private ["So14simd_double2x2a", "pi"]
+- !private ["So14simd_double2x3a", "pi"]
+- !private ["So14simd_double2x4a", "pi"]
+- !private ["So14simd_double3x2a", "pi"]
+- !private ["So14simd_double3x3a", "pi"]
+- !private ["So14simd_double3x4a", "pi"]
+- !private ["So14simd_double4x2a", "pi"]
+- !private ["So14simd_double4x3a", "pi"]
+- !private ["So14simd_double4x4a", "pi"]
+- !private ["So13simd_float2x2a", "pi"]
+- !private ["So13simd_float2x3a", "pi"]
+- !private ["So13simd_float2x4a", "pi"]
+- !private ["So13simd_float3x2a", "pi"]
+- !private ["So13simd_float3x3a", "pi"]
+- !private ["So13simd_float3x4a", "pi"]
+- !private ["So13simd_float4x2a", "pi"]
+- !private ["So13simd_float4x3a", "pi"]
+- !private ["So13simd_float4x4a", "pi"]
+- !private ["So10simd_quatda", "pi"]
+- !private ["So10simd_quatfa", "pi"]
+- !private ["4simd5uint2V", "pi"]
+- !private ["4simd5uint3V", "pi"]
+- !private ["4simd5uint4V", "pi"]
 depends-nominal:
 - !private "So8ARAnchorC"
 - !private "So15ARAnchorCopyingP"
@@ -1253,6 +1335,7 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
+- !private "Sd"
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
@@ -1343,7 +1426,38 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
+- !private "4simd7double2V"
+- !private "4simd7double3V"
+- !private "4simd7double4V"
+- !private "4simd6float2V"
 - !private "4simd6float3V"
+- !private "4simd6float4V"
+- !private "4simd4int2V"
+- !private "4simd4int3V"
+- !private "4simd4int4V"
+- !private "So14simd_double2x2a"
+- !private "So14simd_double2x3a"
+- !private "So14simd_double2x4a"
+- !private "So14simd_double3x2a"
+- !private "So14simd_double3x3a"
+- !private "So14simd_double3x4a"
+- !private "So14simd_double4x2a"
+- !private "So14simd_double4x3a"
+- !private "So14simd_double4x4a"
+- !private "So13simd_float2x2a"
+- !private "So13simd_float2x3a"
+- !private "So13simd_float2x4a"
+- !private "So13simd_float3x2a"
+- !private "So13simd_float3x3a"
+- !private "So13simd_float3x4a"
+- !private "So13simd_float4x2a"
+- !private "So13simd_float4x3a"
+- !private "So13simd_float4x4a"
+- !private "So10simd_quatda"
+- !private "So10simd_quatfa"
+- !private "4simd5uint2V"
+- !private "4simd5uint3V"
+- !private "4simd5uint4V"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -1387,4 +1501,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "22ad9740c2d91d6ee1b9869a13f87426"
+interface-hash: "0b6e1793054cbeb59519de7f0f831cbb"
