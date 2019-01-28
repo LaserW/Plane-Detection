@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         
         let geometry = SCNPlane(width: CGFloat(extent.x), height: CGFloat(extent.z))
         
-        geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        geometry.firstMaterial?.diffuse.contents = UIColor.red
         node.geometry = geometry
         
         //node.eulerAngles.x = -.pi / 2

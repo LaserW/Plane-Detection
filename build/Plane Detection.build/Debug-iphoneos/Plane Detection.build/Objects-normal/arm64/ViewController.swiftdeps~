@@ -15,6 +15,7 @@ provides-dynamic-lookup:
 - "viewWillAppear"
 - "viewWillDisappear"
 depends-top-level:
+- !private "*"
 - !private "/"
 - "ARAnchor"
 - "ARPlaneAnchor"
