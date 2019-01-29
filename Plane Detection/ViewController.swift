@@ -75,10 +75,16 @@ class ViewController: UIViewController {
         let node = SCNNode()
         
         let extent = anchor.extent
+        let superAnchor = anchor
         
         let geometry = SCNPlane(width: CGFloat(extent.x), height: CGFloat(extent.z))
         
-        geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        if superAnchor.alignment == ARPlaneAnchor.Alignment.vertical {
+            geometry.firstMaterial?.diffuse.contents = UIColor.red
+        }
+        else {
+            geometry.firstMaterial?.diffuse.contents = UIColor.blue
+        }
         node.geometry = geometry
         
         node.eulerAngles.x = -.pi / 2
@@ -89,23 +95,23 @@ class ViewController: UIViewController {
         return node
     }
     
-    func createWall(anchor: ARPlaneAnchor) -> SCNNode {
-        let node = SCNNode()
+//    func createWall(anchor: ARPlaneAnchor) -> SCNNode {
+//        let node = SCNNode()
+//
+//        let extent = anchor.extent
+//
+//        let geometry = SCNPlane(width: CGFloat(extent.y), height: CGFloat(extent.z))
+//
+//        geometry.firstMaterial?.diffuse.contents = UIColor.red
+//        node.geometry = geometry
+//
+//        //node.eulerAngles.x = -.pi / 2
+//        node.eulerAngles.x = 3 * .pi/2
+//        node.opacity = 0.25
+    
         
-        let extent = anchor.extent
-        
-        let geometry = SCNPlane(width: CGFloat(extent.y), height: CGFloat(extent.z))
-        
-        geometry.firstMaterial?.diffuse.contents = UIColor.red
-        node.geometry = geometry
-        
-        //node.eulerAngles.x = -.pi / 2
-        node.eulerAngles.x = 3 * .pi/2
-        node.opacity = 0.25
-        
-        
-        return node
-    }
+//        return node
+//    }
     
     func createShip(anchor: ARPlaneAnchor) -> SCNNode {
         let node = SCNScene(named: "art.scnassets/ship.scn")!.rootNode.clone()
@@ -136,8 +142,8 @@ extension ViewController: ARSCNViewDelegate {
         let floor  = createFloor(anchor: anchor)
         node.addChildNode(floor)
         
-        let wall  = createWall(anchor: anchor)
-        node.addChildNode(wall)
+//        let wall  = createWall(anchor: anchor)
+//        node.addChildNode(wall)
         
         
 //        let ship = createShip(anchor: anchor)
